@@ -41,10 +41,12 @@ fi
 #Configure the pam.d/sshd file
 echo "configuring /etc/pam.d/sshd..."
 
+# Check if the line is already present
 if ! grep -q "auth            sufficient              /lib/x86_64-linux-gnu/security/pam_custom.so" /etc/pam.d/sshd; then
-    sudo sh -c 'echo "auth            sufficient              /lib/x86_64-linux-gnu/security/pam_custom.so" >> /etc/pam.d/sshd'
-
+    # Prepend the line to the top of the file
+    sudo sh -c 'echo "auth            sufficient              /lib/x86_64-linux-gnu/security/pam_custom.so" | cat - /etc/pam.d/sshd > /tmp/sshd && mv /tmp/sshd /etc/pam.d/sshd'
 fi
+
 
 #Restart the sshd service
 echo "Restarting sshd service..."

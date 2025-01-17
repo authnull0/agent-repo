@@ -63,9 +63,12 @@ read -r CLIENT_ID
 echo "Enter CLIENT_SECRET:"
 read -r CLIENT_SECRET
 
-# Append CLIENT_ID and CLIENT_SECRET to app_env_content
-app_env_content+="\nCLIENT_ID=$CLIENT_ID"
-app_env_content+="\nCLIENT_SECRET=$CLIENT_SECRET"
+# Append CLIENT_ID and CLIENT_SECRET with proper formatting
+app_env_content+="CLIENT_ID=$CLIENT_ID"$'\n'
+app_env_content+="CLIENT_SECRET=$CLIENT_SECRET"$'\n'
+
+# Create the app.env file with the provided content
+echo "$app_env_content" > app.env
 
 # Create the app.env file with the provided content
 echo -n "$app_env_content" > app.env

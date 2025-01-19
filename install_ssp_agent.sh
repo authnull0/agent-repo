@@ -3,7 +3,7 @@
 # # This script installs the SSP agent on a Linux system and sets up the service.
 # Step 1: Download the agent binary
 echo "Downloading the agent binary..."
-curl -L -o ssp_agent https://github.com/authnull0/windows-endpoint/raw/refs/heads/ssp-agent/ssp-agent/ssp_agent
+curl -L -o ssp_agent https://github.com/authnull0/agent-repo/raw/refs/heads/main/ssp-agent/ssp_agent
 if [ $? -ne 0 ]; then
     echo "Failed to download the agent binary."
     exit 1
@@ -11,7 +11,7 @@ fi
 
 # # Step 2: Download the service file
 echo "Downloading the service file..."
-curl -L -o ssp_agent.service https://github.com/authnull0/windows-endpoint/raw/refs/heads/ssp-agent/ssp-agent/ssp_agent.service
+curl -L -o ssp_agent.service https://github.com/authnull0/agent-repo/raw/refs/heads/main/ssp-agent/ssp_agent.service
 if [ $? -ne 0 ]; then
     echo "Failed to download the service file."
     exit 1

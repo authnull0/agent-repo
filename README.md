@@ -5,19 +5,19 @@ Installing Endpoint Agent
 Run this command to download the installation script for endpoint agent 
 
 
-sudo curl -L -o dowload_agent.sh https://github.com/authnull0/agent-repo/raw/refs/heads/main/download_agent.sh
+sudo curl -L -o download_agent.sh https://github.com/authnull0/agent-repo/raw/refs/heads/main/download_agent.sh
 
 
 Make the script executale 
 
 
-chmod +x dowload_agent.sh
+chmod +x download_agent.sh
 
 
 Run the script
 
 
-sudo ./dowload_agent.sh
+sudo ./download_agent.sh
 
 
 Installing PAM

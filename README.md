@@ -32,7 +32,7 @@ sudo curl -L -o install_pam.sh https://github.com/authnull0/agent-repo/raw/refs/
 Make the script executale 
 
 
-chmod +x install_pam.sh
+sudo chmod +x install_pam.sh
 
 
 Run the script
@@ -53,7 +53,7 @@ sudo curl -L -o install_ssp_agent.sh https://github.com/authnull0/agent-repo/raw
 Make the script executale 
 
 
-chmod +x install_ssp_agent.sh
+sudo chmod +x install_ssp_agent.sh
 
 
 Run the script

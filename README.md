@@ -11,7 +11,7 @@ sudo curl -L -o download_agent.sh https://github.com/authnull0/agent-repo/raw/re
 Make the script executale 
 
 
-chmod +x download_agent.sh
+sudo chmod +x download_agent.sh
 
 
 Run the script

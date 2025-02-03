@@ -42,9 +42,9 @@ fi
 echo "configuring /etc/pam.d/sshd..."
 
 # Check if the line is already present
-if ! grep -q "auth            sufficient              /lib/x86_64-linux-gnu/security/pam_custom.so ssp=https://ssp.test-31.dev-ssp.com/ tenant=default client_id=918003c0-d3bf-4b82-97e8-862043695914 secret=7e979441-40cd-482e-9a19-4541d22880cd" /etc/pam.d/sshd; then
+if ! grep -q "auth            sufficient              /lib/x86_64-linux-gnu/security/pam_custom.so" /etc/pam.d/sshd; then
     # Prepend the line to the top of the file
-    sudo sh -c 'echo "auth            sufficient              /lib/x86_64-linux-gnu/security/pam_custom.so ssp=https://ssp.test-31.dev-ssp.com/ tenant=default client_id=918003c0-d3bf-4b82-97e8-862043695914 secret=7e979441-40cd-482e-9a19-4541d22880cd" | cat - /etc/pam.d/sshd > /tmp/sshd && mv /tmp/sshd /etc/pam.d/sshd'
+    sudo sh -c 'echo "auth            sufficient              /lib/x86_64-linux-gnu/security/pam_custom.so" | cat - /etc/pam.d/sshd > /tmp/sshd && mv /tmp/sshd /etc/pam.d/sshd'
 fi
 
 

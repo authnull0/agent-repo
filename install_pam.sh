@@ -47,6 +47,12 @@ if ! grep -q "auth            sufficient              /lib/x86_64-linux-gnu/secu
     sudo sh -c 'echo "auth            sufficient              /lib/x86_64-linux-gnu/security/pam_custom.so" | cat - /etc/pam.d/sshd > /tmp/sshd && mv /tmp/sshd /etc/pam.d/sshd'
 fi
 
+# Comment out @include common-auth line
+echo "Commenting out '@include common-auth' in /etc/pam.d/sshd..."
+if grep -q "@include common-auth" /etc/pam.d/sshd; then
+    sudo sed -i 's/^@include common-auth/#&/' /etc/pam.d/sshd
+    echo "Successfully commented out '@include common-auth'."
+fi
 
 #Restart the sshd service
 echo "Restarting sshd service..."

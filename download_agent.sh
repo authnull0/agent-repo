@@ -3,7 +3,7 @@
 # This script downloads the SSP agent, linux agent, pam module on a Linux machine
 
 echo "Downloading the endpoint agent binary..."
-curl -L -o agentv2 https://github.com/authnull0/agent-repo/raw/refs/heads/main/linux-agent/agentv2
+curl -L -o agentv2 https://github.com/authnull0/agent-repo/raw/refs/heads/dev/linux-agent/agentv2
 if [ $? -ne 0 ]; then
     echo "Failed to download the agent binary."
     exit 1
@@ -11,7 +11,7 @@ fi
 echo "Downloaded the agent binary successfully."
 
 echo "Downloading the ssp agent binary..."
-curl -L -o ssp_agent https://github.com/authnull0/agent-repo/raw/refs/heads/main/ssp-agent/ssp_agent
+curl -L -o ssp_agent https://github.com/authnull0/agent-repo/raw/refs/heads/dev/ssp-agent/ssp_agent
 if [ $? -ne 0 ]; then
     echo "Failed to download the ssp agent binary."
     exit 1
@@ -19,7 +19,7 @@ fi
 echo "Downloaded the ssp agent binary successfully."
 
 echo "Downloading the service file..."
-curl -L -o ssp_agent.service https://github.com/authnull0/agent-repo/raw/refs/heads/main/ssp-agent/ssp_agent.service
+curl -L -o ssp_agent.service https://github.com/authnull0/agent-repo/raw/refs/heads/dev/ssp-agent/ssp_agent.service
 if [ $? -ne 0 ]; then
     echo "Failed to download the service file."
     exit 1
@@ -27,7 +27,7 @@ fi
 echo "Downloaded the service file successfully."
 
 echo "Downloading the pam module..."
-curl -L -o pam_custom.so https://github.com/authnull0/agent-repo/raw/refs/heads/main/pam-module/pam_custom.so
+curl -L -o pam_custom.so https://github.com/authnull0/agent-repo/raw/refs/heads/dev/pam-module/pam_custom.so
 if [ $? -ne 0 ]; then
     echo "Failed to download the .so file."
     exit 1
@@ -35,7 +35,7 @@ fi
 echo "Downloaded the .so file successfully."
 
 echo "Downloading did.sh file..."
-curl -L -o did.sh https://github.com/authnull0/agent-repo/raw/refs/heads/main/pam-module/did.sh
+curl -L -o did.sh https://github.com/authnull0/agent-repo/raw/refs/heads/dev/pam-module/did.sh
 if [ $? -ne 0 ]; then
     echo "Failed to download did.sh file."
     exit 1
